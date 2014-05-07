@@ -1,0 +1,11 @@
+-# %h2 Custom action loaded and active
+-# %pre @abstract_model.inspect
+-# %pre @object.inspect
+
+= simple_form_for(rails_admin.bulk_upload_url(@abstract_model.to_param, @object.to_param), html: { multipart: true }) do |f|
+  = f.input :gallery_id, :as => :hidden, :input_html => { :name => "gallery_id", :value => @object.id }
+  = file_field_tag('gallery_pictures_file', multiple: true, name: "gallery[pictures_attributes][][image]")
+  -#= f.file_field :image, multiple: true, name: "pictures[][image]"
+  %br
+  %br
+  = f.submit :submit, value: 'Upload', name: 'Upload', :class => 'btn btn-primary'

@@ -1,0 +1,11 @@
+
+en:
+  admin:
+    actions:
+      bulk_upload:
+        title: "Bulk Upload"
+        menu: "Bulk Upload for %{model_label} '%{object_label}'"
+        breadcrumb: "Bulk Upload"
+        link: "Bulk Upload"
+        bulk_link: "Bulk Upload selected %{model_label_plural}"
+        done: "Bulk Uploaded"
